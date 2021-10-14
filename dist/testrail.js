@@ -19,11 +19,11 @@ var TestRail = /** @class */ (function () {
                 password: this.options.password,
             }
         }).then(function (response) {
-            _this.lastRunDate = moment.unix(response.data[0].created_on).format('MM/DD/YYYY');
+            _this.lastRunDate = moment.unix(response.data.runs[0].created_on).format('MM/DD/YYYY');
             // set current date with same format as this.lastRunDate
             _this.currentDate = moment(new Date()).format('L');
             if (_this.lastRunDate === _this.currentDate) {
-                console.log("Test Run already created today. Posting results to Test Run ID: R" + response.data[0].id);
+                console.log("Test Run already created today. Posting results to Test Run ID: R" + response.data.runs[0].id);
                 return true;
             }
             return false;
@@ -49,8 +49,8 @@ var TestRail = /** @class */ (function () {
             }),
         })
             .then(function (response) {
-            console.log('Creating Test Run... ---> Run id is:  ', response.data.id);
-            _this.runId = response.data.id;
+            console.log('Creating Test Run... ---> Run id is:  ', response.data.runs[0].id);
+            _this.runId = response.data.runs[0].id;
         });
         // .catch(error => console.(error));
     };
@@ -86,7 +86,7 @@ var TestRail = /** @class */ (function () {
                     password: this.options.password,
                 }
             }).then(function (response) {
-                _this.runId = response.data[0].id;
+                _this.runId = response.data.runs[0].id;
                 console.log("Publishing results to latest run: " + _this.runId);
                 publishToAPI();
             });
