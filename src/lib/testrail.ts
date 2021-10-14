@@ -57,8 +57,8 @@ export class TestRail {
       }),
     })
       .then(response => {
-          console.log('Creating Test Run... ---> Run id is:  ', response.data.runs[0].id);
-          this.runId = response.data.runs[0].id;
+          console.log('Creating Test Run... ---> Run id is:  ', response.data.id);
+          this.runId = response.data.id;
       })
       // .catch(error => console.(error));
   }

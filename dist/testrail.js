@@ -49,8 +49,8 @@ var TestRail = /** @class */ (function () {
             }),
         })
             .then(function (response) {
-            console.log('Creating Test Run... ---> Run id is:  ', response.data.runs[0].id);
-            _this.runId = response.data.runs[0].id;
+            console.log('Creating Test Run... ---> Run id is:  ', response.data.id);
+            _this.runId = response.data.id;
         });
         // .catch(error => console.(error));
     };
