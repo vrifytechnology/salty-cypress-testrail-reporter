@@ -28,18 +28,18 @@
     "build": "npm run clean && npm run tsc"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "btoa": "^1.1.2",
-    "chalk": "^2.4.1",
-    "mocha": "^5.2.0",
-    "moment": "^2.23.0"
+    "axios": "^1.4.0",
+    "btoa": "^1.2.1",
+    "chalk": "^4.1.2",
+    "mocha": "^10.2.0",
+    "moment": "^2.29.4"
   },
   "devDependencies": {
-    "@types/chai": "^3.4.34",
-    "@types/mocha": "^2.2.36",
-    "@types/node": "^6.14.2",
-    "chai": "^3.5.0",
-    "rimraf": "^2.6.3",
-    "typescript": "^2.9.2"
+    "@types/chai": "^3.5.2",
+    "@types/mocha": "^2.2.48",
+    "@types/node": "^6.14.13",
+    "chai": "^4.3.7",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.1.6"
   }
 }
